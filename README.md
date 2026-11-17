@@ -3,7 +3,7 @@ Este es un repositorio con material de C++ para el Taller de Herramientas Comput
 
 ## Visual Studio Code
 
-Para trabajar durante el curso nos resulta más cómodo utilizar un entorno de desarrollo integrado (IDE por sus siglas en inglés) para programar, sobre todo cuando se trata de un lenguaje que tocamos por primera vez. El más recomendado por los programadores es **Visual Studio Code**. El limk de descarga es el siguiente: https://code.visualstudio.com/
+Para poner manos a la obra en nuestro curso, nos resulta más cómodo utilizar un entorno de desarrollo integrado (IDE por sus siglas en inglés) para programar, sobre todo cuando se trata de un lenguaje que tocamos por primera vez. El más recomendado por los programadores es **Visual Studio Code**. El limk de descarga es el siguiente: https://code.visualstudio.com/
 
 Además de ser más cómodo para programar, tener un IDE de confianza nos permite guardar nuestros programas de una manera que nos de fácil acceso a ellos en el futuro.
 
@@ -19,8 +19,8 @@ Aunque en esta materia lo normal es que los alumnos aprendan a programar en Pyth
 Las principales referencias usadas para este material son:
 
 Kolte, R. (2016). C++ Programming Language. https://roshankolte.wordpress.com/wp-content/uploads/2016/10/c2.pdf.
+Dale, N., & Weems, C. (2007). Programación y resolución de problemas con C++ (4.ª ed.). McGraw-Hill Interamericana.
 https://www.learncpp.com/
-Ambos recursos son de libre acceso. En particular este material se basa fuertemente en el segundo.
 
 En algunas de las carpetas hay archivos .cpp y pedazos de código dentro de los archivos de texto. Lo más recomendable es que los interesados en revisar con detenimiento los códigos, los copien en el IDE de su preferencia (recomiendo Visual Studio Code) y allí sea donde los analicen y ejecuten. La recomendación es porque en un IDE es significativamente más fácil distinguir pedazos de código de comentarios, además de verificar si hay errores, el código está bien indentado, nos faltó algún paréntesis o corchete...
 
