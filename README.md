@@ -1,4 +1,4 @@
-# C-Para-Estudiantes-De-Ciencias-
+# C++ Para Estudiantes De Ciencias
 Este es un repositorio con material de C++ para el Taller de Herramientas Computacionales impartido en la Facultad de Ciencias de la UNAM
 
 ## Visual Studio Code
@@ -11,7 +11,7 @@ Hay uno que se llama parecido y es de color morado, ese no es.
 
 Para poder programar en C++ con VSC hay que descargar algunas extensiones, el link para hacerlo junto con las instrucciones es el siguiente: https://code.visualstudio.com/docs/cpp/config-mingw
 
-## Sobre el material
+## Sobre El Material
 Las numeración de las carpetas principales está basada en el plan de estudios de la materia Taller de Herramientas Computacionales que se imparte en la Facultad de Ciencias de la UNAM. Aquí el plan de estudios: https://web.fciencias.unam.mx/asignaturas/756.pdf
 
 Aunque en esta materia lo normal es que los alumnos aprendan a programar en Python (puesto que es más sencillo para principiantes), C++ proporciona una experiencia más completa para aprender conceptos fundamentales de programación y desarrollar habilidades avanzadas desde el principio.
