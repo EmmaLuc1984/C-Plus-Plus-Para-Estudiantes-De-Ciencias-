@@ -36,3 +36,7 @@ int i {}, j {};            // inicialización de valor
 
 Esto no:
 `int a, b = 5; // error (¡la variable 'a' no fue inicializada!)`
+
+
+
+Por practicidad, y dado que nuestros programas son en realidad bastante pequeños, a lo largo de este curso declararemos variables usando ejemplos del estilo: `int b = 5;`,  `int a;`, `int d { 7 };`
