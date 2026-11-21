@@ -12,7 +12,7 @@ Hacer uso de las matrices nos permite presentar a las transformaciones lineales 
 
 Las transformaciones lineales no son las únicas que se pueden representar mediante el uso de matrices, otras transformaciones no necesariamente lineales (como la traslación, que es una transformación [afín](https://en.wikipedia.org/wiki/Affine_transformation)) también se pueden representar de esta forma. Si tenemos una transformación afín en $\mathbb{R}^n$, ésta puede ser representada como una transformación lineal en $\mathbb{R}^{n+1}$.
 
-## Encontrar la matriz de una transformación lineal
+## Encontrar La Matriz De Una Transformación Lineal
 
 Si $T:\mathbb{R}^n \to \mathbb{R}^m$ es una transformación lineal, su matriz de transformación $A$ se puede obtener transformando cada uno de los vectores de la [base canónica](https://es.wikipedia.org/wiki/Base_can%C3%B3nica) (en $\mathbb{R}^2$ esta es { $\bar{e}_1, \bar{e}_2$ } $=$ { $(1,0), (0,1)$ }) e insertando el resultado en las columnas correspondientes de la matriz.
 

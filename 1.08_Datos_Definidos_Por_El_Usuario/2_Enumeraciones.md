@@ -1,8 +1,6 @@
-# Enumeraciones
-
 Una *enumeración* es un tipo de dato definido por el usuario cuyos valores están restringidos a un conjunto de constantes simbólicas con nombre (llamadas *enumeradores*).
 
-C++ permite definir dos tipos de enumeraciones: las **enumeraciones sin ámbito**, que corresponden a la forma tradicional de declarar un `enum`, y las **enumeraciones con ámbito**, que se declaran mediante la sentencia `enum class`. En esta sección nos centraremos primero en las enumeraciones sin ámbito, ya que las enumeraciones con ámbito requieren introducir previamente algunos conceptos relacionados con temas posteriores.
+C++ permite definir dos tipos de enumeraciones: las **enumeraciones sin ámbito**, que corresponden a la forma tradicional de declarar un `enum`, y las **enumeraciones con ámbito**, que se declaran mediante la sentencia `enum class`. En lo que respecta a este curso, vamos a centrarnos en las enumeraciones sin ambito.
 
 ## Enumeraciones Sin Ambito 
 La sintaxis de una enumeración es la siguiente: 

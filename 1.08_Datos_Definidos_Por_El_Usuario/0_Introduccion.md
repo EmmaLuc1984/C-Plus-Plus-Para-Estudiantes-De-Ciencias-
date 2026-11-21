@@ -1,6 +1,6 @@
-# Datos Definidos Por el Usuario 
+# Datos Definidos Por El Usuario 
 
-Hasta ahora hemos venido trabajando con programas donde se han utilizado principalmente tipos de datos que ya forman parte del lenguaje, como `int`, `float`, `char` y `bool`. Sin embargo, C++ también permite que el programador **defina y organice sus propios tipos de datos** para representar información de una manera más adecuada al problema que se desea resolver.
+Hasta ahora, la mayor parte del tiempo, hemos venido trabajando con programas donde se han utilizado principalmente tipos de datos que ya forman parte del lenguaje, como `int`, `float`, `char` y `bool`. Sin embargo, C++ también permite que el programador *defina y organice sus propios tipos de datos* para representar información de una manera más adecuada al problema que se desea resolver.
 
 Los **datos definidos por el usuario** permiten crear nombres alternativos para tipos existentes, establecer un conjunto de valores relacionados o agrupar diferentes datos dentro de una misma entidad. Esto resulta especialmente útil cuando los tipos básicos del lenguaje no son suficientes para representar la información de un programa de forma clara y ordenada.
 

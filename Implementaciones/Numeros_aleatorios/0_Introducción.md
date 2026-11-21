@@ -16,7 +16,7 @@ En consecuencia, las computadoras son generalmente incapaces de generar números
 
 Para simular la aleatoriedad, los programas típicamente usan **generadores de números pseudo-aleatorios** (PRNGs por sus siglas en inglés). Un generador de números pseudo-aleatorios es un algoritmo que genera una secuencia de números que parecen aleatorios, pero en realidad son completamente deterministas porque están basados en un valor inicial llamado **semilla** (*seed*).
 
-### ¿Cómo funciona un PRNG?
+### ¿Cómo Funciona Un PRNG?
 
 1. Semilla inicial:
    1. La **semilla** es el valor de entrada inicial que utiliza el PRNG para generar la secuencia de números. Cambiar la semilla cambia completamente la secuencia resultante.
@@ -37,7 +37,7 @@ La semilla es esencial para el funcionamiento del PRNG porque:
 
 Existen muchos algoritmos PRNG; por razones en las que no profundizaremos aquí, muchos de ellos son considerados obsoletos bajo estándares modernos. Más adelante en este material sólo profundizaremos en aquellos (en realidad *aquel*) que funciona de manera decente y es sencillo de utilizar. 
 
-## Proporcionar una semilla
+## Proporcionar Una Semilla
 
 Como ya se mencionó anteriormente, la secuencia de "números aleatorios" generada por un PRNG no es aleatoria en lo absoluto (pues queda determinada por su semilla).
 
@@ -61,7 +61,7 @@ El estado de un PRNG se representa con un conjunto de bits. Por ejemplo:
 El número real de secuencias únicas que puede generar un PRNG queda determinado por el número de semillas únicas que le podemos proveer. Por ejemplo, si usamos un algoritmo que sólo puede generar 4 semillas únicas para sembrar un PRNG, éste sólo puede generar (a lo más) 4 secuencias únicas.
 
 
-## Aleatorización en C++
+## Aleatorización En C++
 
 El encabezado (*header*) `<random>` de la librería estándar de C++ es aquel que nos permite acceder a las capacidades de aleatorización de este lenguaje. Dentro de la biblioteca `random` hay 6 familias de PRNGs disponibles:
 

@@ -67,7 +67,7 @@ También es importante notar que la declaración de la `struct`, por sí sola, n
 Cuando se declaran variables como `primer_alumno` y `alumno` de tipo `Registro_alumno`, entonces sí se reserva el espacio de memoria necesario para almacenar los datos correspondientes a cada alumno.
 
 
-## Acceso a Componentes individuales
+## Acceso A Componentes Individuales
 
 Para acceder a un miembro específico de una variable de tipo `struct`, se escribe primero el **nombre de la variable**, seguido de un punto (`.`) y, finalmente, el **nombre del miembro**. Esta forma de acceder a los datos recibe el nombre de **selector de miembro** y utiliza la llamada **notación de punto**.
 

@@ -82,7 +82,7 @@ Imprime **siempre** la secuencia:
 2389708215      4143129887      3607425725      3108204897      216844123
 ```
 
-## Lanzar un dado usando Mersenne Twister
+## Lanzar Un Dado Usando Mersenne Twister
 
 Si usamos `std::mt19937`, estamos inicializando un Mersenne Twister de 32-bits. Esto quiere decir que la secuencia de números puede tomar valores entre $0$ y $2^{32}-1=4,294,967,295$.
 
@@ -147,7 +147,7 @@ Para garantizar que la secuencia de números generados sí cambie cada vez que c
 * Usar la hora del sistema
 * Usar el dispositivo aleatorio (*random device*) del sistema
 
-## Sembrar usando el reloj del sistema
+## Sembrar Usando El Reloj Del Sistema
 
 A menos que corramos un programa dos (o más) veces *exactamente* al mismo tiempo, la hora del día a la que es corrido va a ser distinta. 
 
@@ -191,7 +191,7 @@ La desventaja de este enfoque es que si corremos el programa múltiples veces en
 
 Una elección popular en vez de `std::chrono::steady_clock` es `std::chrono::high_resolution_clock`. `std::chrono::high_resolution_clock` es un reloj que usa una medida más granular de tiempo, pero puede usar la hora del sistema (que puede ser modificada por el usuario). `std::chrono::steady_clock` tiene ticks menos granulares, pero es el único reloj que tiene la garantía de no poder ser ajustado por el usuario.
 
-## Sembrar usando random device
+## Sembrar Usando Random Device
 
 Un **random device** de un sistema es una herramienta o mecanismo que genera números más impredecibles sin el uso de un algoritmo determinista basándose en la entropía del entorno físico del hardware. Esto quiere decir que proporciona datos aleatorios obtenidos de fenómenos en el hardware de un sistema. Estos datos suelen usarse para tareas que requieren alta seguridad o aleatoriedad, como criptografía o generación de claves seguras.
 
@@ -236,7 +236,7 @@ En el programa anterior, estamos sembrando nuestro Mersenne Twister con un núme
 
 Un problema potencial de usar `std::random_device` es que no es imperativo que sea no-determinista, lo que quiere decir que *podría* (en algunos sistemas) generar siempre la misma semilla (y en consecuencia provocar que el PRNG al que siembra produzca siempre la misma secuencia). Sin embargo, las versiones más recientes de prácticamente cualquier compilador, dan soporte a implementaciones adecuadas de `std::random_device`.
 
-### Por qué no se debe sembrar un PRNG más de una vez:
+### Por Qué No Se Debe Sembrar Un PRNG Más De Una Vez:
 
 Muchos PRNGs pueden ser resembrados (*reseeded*) después de la siembra inicial. Esto esencialmente re-inicializa el estado del generador de números aleatorios, provocando que genere resultados empezando por el nuevo estado dado por la nueva semilla.
 
@@ -245,7 +245,7 @@ Generalmente resembrar un PRNG no es una buena idea a menos que tengamos una raz
 2. Con referencia al punto anterior, la semilla que se le proporciona al PRNG determina la secuencia que produce. Si re-siembras constantemente, dependes de que la fuente de **entropía** (aleatoriedad en las semillas) sea de alta calidad. Usar la hora del sistema garantiza semillas parecidas porque aún si esperamos "un buen rato" cada vez que corremos nuestro programa, hay partes de la semilla que se van a quedar fijas (la del año y el mes, por ejemplo), además de que en algunos sistemas `std::random_device` no es verdaderamente aleatorio, sino que genera valores basados en un contador, el tiempo del sistema, o un número limitado de estados internos. 
 3. Re-sembrar un PRNG constantemente es computacionalmente costoso porque inicializa estructuras internas, lo cual puede ser mucho más lento que simplemente usar el estado ya existente del generador.
 
-## Mersenne Twister y problemas de sub-siembra
+## Mersenne Twister Y Problemas De Sub-siembra
 
 El estado interno de Mersenne Twister contiene 624 valores enteros. Para `std::mt19937` (el que hemos estado usando) estos valores pueden tener un tamaño de 32 ó 64 bits. 
 

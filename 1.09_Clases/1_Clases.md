@@ -8,7 +8,7 @@ C++ permite adoptar este enfoque mediante las **clases**, un tipo de dato estruc
 
 Aunque una clase comparte ciertas características con un registro, su propósito va más allá de agrupar datos. Generalmente, sus miembros incluyen tanto los datos que describen un objeto como las funciones encargadas de operar sobre ellos. De esta manera, se reúnen en una misma unidad la información y las operaciones asociadas.
 
-A continuación, se presenta una declaración de clase en C++ que representa el TDA `Tiempo`, presentado al final del capitulo anterior:
+A continuación, se presenta una declaración de clase en C++ que representa el TDA `Tiempo`, [presentado en](https://github.com/EmmaLuc1984/C-Plus-Plus-Para-Estudiantes-De-Ciencias-/blob/main/1.08_Datos_Definidos_Por_El_Usuario/6_Abstraccion_de_datos.md):
 
 ```cpp
 class Tiempo

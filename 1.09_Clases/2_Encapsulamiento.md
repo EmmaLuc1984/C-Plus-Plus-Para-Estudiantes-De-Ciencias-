@@ -45,7 +45,7 @@ Aunque el lenguaje no obliga a declarar como `const` todas las funciones miembro
 
 En C++, no es obligatorio declarar los miembros públicos y privados de una clase en un orden específico. Existen distintas maneras de organizar estas secciones, aunque algunas convenciones facilitan la lectura y comprensión del código.
 
-Por defecto, los miembros de una clase son privados. Para permitir que otros componentes del programa accedan a determinados miembros, se utiliza la palabra reservada `public` (tambnian llamada *especificador*). Por ejemplo, la clase `Tiempo` podría declararse de la siguiente manera:
+Por defecto, los miembros de una clase son privados. Para permitir que otros componentes del programa accedan a determinados miembros, se utiliza la palabra reservada `public` (conocida tambien como *especificador*). Por ejemplo, la clase `Tiempo` podría declararse de la siguiente manera:
 
 ```cpp
 class Tiempo

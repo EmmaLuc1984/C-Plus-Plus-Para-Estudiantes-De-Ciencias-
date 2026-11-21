@@ -2,7 +2,7 @@
 
 A medida que aumenta la complejidad del software, el diseño de los algoritmos y de las estructuras de datos se realiza de manera conjunta. Este proceso parte de una representación lógica o abstracta de la estructura de datos, planteada en un nivel general, y avanza mediante sucesivas etapas de refinamiento hasta llegar a su implementación concreta en C++.
 
-Para ilustrar este proceso, en `4_registros` se presentaron dos formas de representar la estructura lógica de un registro utilizado en un inventario de almacén. En la primera, todos los componentes del registro se definieron directamente en un mismo nivel. En la segunda, se empleó un registro jerárquico, en el que las fechas y las estadísticas relacionadas con el historial de la máquina se agruparon en un registro de menor nivel.
+Para ilustrar este proceso, [en esta lección](https://github.com/EmmaLuc1984/C-Plus-Plus-Para-Estudiantes-De-Ciencias-/blob/main/1.08_Datos_Definidos_Por_El_Usuario/4_Registros.md) se presentaron dos formas de representar la estructura lógica de un registro utilizado en un inventario de almacén. En la primera, todos los componentes del registro se definieron directamente en un mismo nivel. En la segunda, se empleó un registro jerárquico, en el que las fechas y las estadísticas relacionadas con el historial de la máquina se agruparon en un registro de menor nivel.
 
 Consideremos nuevamente ambas formas de representar la estructura lógica de los datos:
 
@@ -149,6 +149,6 @@ Por ejemplo, para implementar el tipo de dato abstracto `Lista_enteros`, podría
 
 Por otro lado, el tipo de dato abstracto `Tiempo` podría representarse mediante tres variables de tipo `int`: una para las horas, otra para los minutos y una más para los segundos. También podrían considerarse otras representaciones, siempre que permitan cumplir con las operaciones establecidas en la especificación.
 
-Lo importante es que **la especificación de un TDA no obliga a utilizar una representación concreta**. Mientras la implementación respete las propiedades y el comportamiento definidos, el programador puede elegir entre distintas alternativas. Esta decisión puede depender de varios factores, como la eficiencia en el tiempo de ejecución, la cantidad de memoria que se necesita o la sencillez y legibilidad del código.
+Lo importante es que **la especificación de un tipo de dato abstracto no obliga a utilizar una representación concreta**. Mientras la implementación respete las propiedades y el comportamiento definidos, el programador puede elegir entre distintas alternativas. Esta decisión puede depender de varios factores, como la eficiencia en el tiempo de ejecución, la cantidad de memoria que se necesita o la sencillez y legibilidad del código.
 
 Conforme se adquiere experiencia, resulta más sencillo evaluar estas alternativas y elegir la que mejor se adapte a cada problema. La separación entre la especificación y la implementación permite precisamente esto: definir primero qué debe hacer un tipo de dato y decidir después cómo llevarlo a la práctica.

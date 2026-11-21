@@ -1,6 +1,6 @@
 # Problemas En `structs`
 
-En el capítulo anterior (`Datos definidos por el usuario`) conocimos los registros (`struct`) y vimos que son muy útiles para agrupar varias variables dentro de un solo objeto, facilitando su inicialización y el manejo de todos sus datos dentro de una sola unidad. En otras palabras, los registros ofrecen una forma práctica de organizar, almacenar y manipular información relacionada.
+En el capítulo anterior, [en concreto en](https://github.com/EmmaLuc1984/C-Plus-Plus-Para-Estudiantes-De-Ciencias-/blob/main/1.08_Datos_Definidos_Por_El_Usuario/4_Registros.md) conocimos los registros (`struct`) y vimos que son muy útiles para agrupar varias variables dentro de un solo objeto, facilitando su inicialización y el manejo de todos sus datos dentro de una sola unidad. En otras palabras, los registros ofrecen una forma práctica de organizar, almacenar y manipular información relacionada.
 
 Consideremos la siguiente `struct`:
 

@@ -2,7 +2,7 @@ En la entrada anterior, ya vimos cómo podemos simular el [lanzamiento de un dad
 
 A continuación van otro par de aplicaciones útiles haciendo uso de este PRNG:
 
-## Lanzar una moneda:
+## Lanzar Una Moneda:
 
 ![fear-and-hunger-coin-flip](https://github.com/user-attachments/assets/8133713d-8c1b-48dc-868d-cee77119c58e)
 
@@ -108,7 +108,7 @@ Total de soles: 24 (60.00%)
 
 Conforme $n \to ∞$, tendremos proporciones más cercanas a la esperada (50/50).
 
-## Generación de números aleatorios en un intervalo $[a,b]$:
+## Generación De Números Aleatorios En Un Intervalo $[a,b]$:
 
 ```c++
 /*
