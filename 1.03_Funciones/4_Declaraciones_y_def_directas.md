@@ -80,7 +80,7 @@ Nos aparecerá un error porque nunca definimos `doble()`, entonces el programa n
 
 Lo más común es usar declaraciones directas cuando se trata de funciones. Sin embargo, también las podemos usar con otros identificadores de C++ como variables y tipos, aunque para ellos la sintaxis es un poco distinta.
 
-### Declaraciones y definiciones
+### Declaraciones Y Definiciones
 Es común que los términos 'declaración' y 'definición' sean usados de manera indistinta (es probable que yo lo haya hecho ya en este material... y probablemente lo siga haciendo), sin embargo, hay algunas diferencias sutiles entre ambos:
 
 Una **declaración** le avisa al compilador sobre la existencia de un identificador y la información asociada con éste.
@@ -112,7 +112,7 @@ En C++ todas las definiciones son declaraciones, pero no todas las declaraciones
 
 En el 'lenguaje coloquial', lo más común es referirnos a las declaraciones puras simplemente como 'declaraciones'.
 
-## La regla de una definición
+## La Regla De Una Definición
 **The one definition rule (ODR)** es una regla bien conocida en C++:
 1. *En un mismo archivo*, cada función, variable, template (base pre-diseñada para estructurar el contenido de una aplicación o página web) en un cierto alcance (ver: *Intro_a_alcance_local.md*) sólo puede tener una definición. Mismas definiciones ocurriendo en diferentes alcances (ej.: Variables locales definidas en el cuerpo de distintas funciones), no rompen esta regla.
 2. *Dentro de un programa*, cada función o variable sólo puede tener una definición. Esta regla existe porque un solo programa puede estar conformado por más de un archivo.

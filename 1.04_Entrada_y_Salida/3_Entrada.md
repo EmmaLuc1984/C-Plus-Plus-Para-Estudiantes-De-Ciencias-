@@ -3,7 +3,7 @@
 Una de las principales ventajas de las computadoras es que un mismo programa puede utilizarse con diferentes conjuntos de datos. Para lograrlo, los datos deben permanecer separados del programa hasta el momento de su ejecución. Entonces, las instrucciones toman los valores del conjunto de datos y los asignan a las variables del programa. Una vez guardados en ellas, el programa ya puede realizar cálculos con esos valores.
 A este proceso de transferir valores desde un conjunto de datos externo hacia las variables de un programa se le llama entrada. En términos generales, también se dice que la computadora está leyendo datos externos para almacenarlos en variables. Estos datos pueden provenir de un dispositivo de entrada o de un archivo guardado en un dispositivo de almacenamiento. Más adelante veremos el uso de archivos; por ahora, se consideraremos al teclado como el medio estándar para introducir datos.
 
-## Flujo de Entrada y el Operador de Extracción `>>`
+## Flujo de Entrada Y El Operador De Extracción `>>`
 
 
 El concepto de *flujo* es esencial para comprender la entrada y salida en C++. Como explicamos antes, un *flujo de salida* puede imaginarse como una sucesión continua de caracteres que viajan desde el programa hacia un dispositivo de salida. De forma similar, un *flujo de entrada* es una sucesión continua de caracteres que llega al programa desde un dispositivo de entrada.
@@ -62,7 +62,7 @@ Algunas cosas mas que debes de saber sobre el uso del operador de extracción so
 - El dato que escribas debe coincidir con el tipo de la variable. Si la variable es `int`, debe recibir un número entero; si es `float`, un número decimal.
 - El operador `>>` omite los espacios en blanco y lee solo lo necesario. Eso significa que no toma en cuenta espacios, saltos de línea ni tabulaciones al buscar el siguiente dato. 
 
-## Marcador de Lectura 
+## Marcador De Lectura 
 
 Para entender un poco mejor cómo funciona la entrada de datos, tenemos el concepto de *marcador de lectura*. Este marcador funciona como un separador que indica en qué parte del flujo de entrada debe seguir leyendo la computadora. Es decir, señala cuál es el siguiente carácter que todavía no se ha leído. El operador de extracción `>>` deja ese marcador justo después del último dato capturado. Por ejemplo, supón que quieres ingresar los datos 25 8 y el porgrama tiene las siguientes sentencias: 
 
@@ -74,7 +74,7 @@ cin >> x;
 Cuando se ejecuta `cin >> x;`, el operador de extracción busca el primer número disponible en la entrada, lee 25 y lo guarda en la variable `x`; como ya obtuvo un entero completo, se detiene en ese punto y deja el siguiente dato, 8, esperando para una próxima lectura, de modo que el marcador de lectura queda colocado justo antes de ese valor para continuar desde allí cuando se use otra vez `cin >> `.
 
 
-## Lectura de Datos con la Función `get`
+## Lectura de Datos Con La Función `get`
 
 Como mencionamos hace un ratito, el operador `>>` ignora los espacios en blanco iniciales, como espacios y saltos de línea, mientras busca el siguiente dato en la entrada. Por ejemplo, si tenemos que `ch1` y `ch2` son varibales de tipo `char` y el programa ejecuta: 
 
@@ -127,7 +127,7 @@ Por lo general, la primer forma suele ser mas facil de leer y entender.
 
 
 
-## Omitir Carácterees con la Función `ignore` 
+## Omitir Carácterees Con La Función `ignore` 
 En C++ contamos con la función `ignore`, la cual es del tipo `istream`. Esta es una herramienta que casi nunca se usa, pero que resulta muy útil cuando se necesita. Sirve para leer y descartar caracteres que están en el flujo de entrada, es decir, hace que el programa ignore parte de lo que el usuario escribió. Es una función con dos argumentos, la cual puedes llamar de esta manera:
 
 ```c++
@@ -178,7 +178,7 @@ Así `cin >>` solo toma como entrada 25 y el resto de carácteres se queda en el
 'a' 'b' 'c' '\n'
 ```
 
-## Lectura de Datos de Cadena y uso de `getline`
+## Lectura De Datos De Cadena Y Uso De `getline`
 
 Ahora veremos como ingresar cadenas de caracteres: Para guardar una cadena de caracteres en una variable `string`, hay dos maneras principales. La primera consiste en usar el operador de extracción `>>`. Cuando este operador lee datos para una variable `string`, ignora primero los espacios en blanco al inicio y luego comienza a copiar los caracteres hasta encontrar el siguiente espacio en blanco. Ese espacio no se guarda en la cadena; simplemente queda pendiente en el flujo de entrada. Por ejemplo, si tenemos las instrucciones: 
 

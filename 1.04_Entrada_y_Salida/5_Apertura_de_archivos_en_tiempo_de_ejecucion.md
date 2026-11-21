@@ -1,4 +1,4 @@
-## Ingreso de Archivos en Tiempo de Ejecución
+# Ingreso De Archivos En Tiempo De Ejecución
 
 Hasta ahora, los ejemplos para abrir un archivo de entrada han incluido un código similar a lo siguiente:
 

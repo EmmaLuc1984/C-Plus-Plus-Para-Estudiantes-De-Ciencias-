@@ -7,7 +7,7 @@ Podemos definir a un *archivo*  como un área nombrada en el almacenamiento secu
 
 ¿Por qué querría guardarse la salida de un programa en un archivo? Porque el contenido de ese archivo puede verse en la pantalla y analizarse. Así, es posible revisar los resultados varias veces sin necesidad de ejecutar de nuevo el programa. Además, la información guardada puede usarse como entrada en otro programa.
 
-## Uso de Archivos 
+## Uso De Archivos 
 
 Si se desea que un programa trabaje con entrada y salida de archivos, hay cuatro pasos básicos:
 
@@ -18,14 +18,14 @@ Si se desea que un programa trabaje con entrada y salida de archivos, hay cuatro
 
 Vamos a desmenuzar esto por partes y posteriormente construiremos un programa: 
 
-### *Incluir el *header* `fstream` mediante el preprocesador (`#include <fstream>`):*
+### Incluir El *header* `fstream` Mediante El Preprocesador (`#include <fstream>`):
 
 
 A través del encabezado `fstream`, la biblioteca estándar de C++ define dos tipos de datos: `ifstream` y `ofstream`, que corresponden, respectivamente, a flujos de entrada y de salida de archivos. De acuerdo con la idea general de los flujos en C++, `ifstream` representa una secuencia de caracteres que proviene de un archivo de entrada, mientras que `ofstream` representa una secuencia de caracteres que se dirige a un archivo de salida.
 
 Las operaciones que ya se conocen de `istream`, como el operador de extracción `>>`, la función `get` y la función `ignore`, también pueden utilizarse con `ifstream`. Del mismo modo, las operaciones de `ostream`, como el operador de inserción `<<` y los manipuladores como `endl`, también funcionan con `ofstream`. Además de estas operaciones básicas, `ifstream` y `ofstream` incluyen funciones adicionales diseñadas específicamente para trabajar con archivos.
 
-### *Declarar los flujos de archivo que se van a utilizar:*
+### Declarar Los flujos De Archivo Que Se Van A Utilizar:
 
 En un programa, las variables de flujo se declaran igual que cualquier otra variable: primero se escribe el tipo de dato y después el nombre. Por ejemplo:
 
@@ -39,7 +39,7 @@ ofstream archivo_de_salida;
 Las variables de flujo `cin` y `cout` no es necesario declararlas, porque el encabezado iostream ya lo hace automáticamente.
 
 
-### *Abrir cada archivo para lectura o escritura mediante la función `open`:*
+### Abrir Cada Archivo Para Lectura O Escritura Mediante La Función `open`:*
 
 Este paso consiste en consiste en preparar cada archivo para su lectura o escritura, proceso que se conoce como *apertura de archivo*. Al abrir un archivo, el sistema operativo realiza ciertas acciones que dejan listo el archivo para la entrada o la salida de datos.
 
@@ -72,7 +72,7 @@ Cerrar un archivo hace que el sistema operativo realice las tareas finales neces
 ¿Es obligatorio llamar siempre a `close` cuando terminas de leer o escribir un archivo? En algunos lenguajes sí es muy importante recordarlo. Pero en C++, el archivo se cierra automáticamente cuando el programa sale del bloque de instrucciones en el que se declaró la variable de flujo. En este momento, se ejecuta una función especial llamada *destructor*, que pertenece a `ifstream` y `ofstream`, y esa función se encarga de cerrar el archivo por ti. Por eso, no es muy común ver programas en C++ que llamen explícitamente a `close`. Aun así, muchos programadores prefieren hacerlo como una buena costumbre, y tú también puedes usar esa práctica.
 
 
-### Indicar el nombre del flujo de archivo en cada operación de entrada o salida: 
+### Indicar El Nombre Del Flujo De Archivo En Cada Operación De Entrada O Salida: 
 
 Hay un último detalle que debe realizarse al trabajar con archivos. Como ya habiamos visto, todas las operaciones de `istream` también funcionan con `ifstream`, y todas las operaciones de `ostream` también pueden usarse con `ofstream`. Por eso, para leer o escribir en un archivo, basta con reemplazar `cin` o `cout` por el flujo de archivo correspondiente en las sentencias de entrada y salida. 
 Vamos a revisar esto a partir de un problema como referencia. Imagina que has ahorrado suficiente dinero para comprar un videojuego que te llama la atención durante las rebajas de Navidad. Sin embargo, la plataforma que usas es PS5, y sabes que los precios de su tienda oficial no están regionalizados, así que el costo del juego se mantiene igual sin importar desde dónde lo compres. Para ayudarte a organizar tu compra, decides crear un pequeño programa en C++ que lea desde un archivo de texto el nombre del videojuego, su precio original y el porcentaje de descuento. Con esos datos, el programa calculará cuánto tendrás que pagar realmente, aplicando el descuento y agregando el IVA correspondiente, y finalmente guardará el recibo final en otro archivo de texto. 
@@ -166,6 +166,6 @@ out_data << fixed << setprecision(2);
 ```
 
 
-## Programas auxiliares
+## Programas Auxiliares
 
 En la carpeta `Programa_lectura_de_archivos` viene este programa con un ejemplo de entrada y salida de archivos. 

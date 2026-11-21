@@ -1,4 +1,4 @@
-# Reglas de Precedencia 
+# Reglas De Precedencia 
 
 
 A lo largo de estas lecciones hemos trabajado un poco con las expresiones aritmeticas las cuales a lo sumo han tenido un solo operador. También se ha tenido cuidado de no combinar valores enteros y de punto flotante en la misma expresión. Ahora vamos a considerar expresiones un poco mas complicadas, compuestas de varios operadores y que contienen tipos de datos mixtos.
@@ -34,7 +34,7 @@ Por supuesto, puedes cambiar el orden de evaluación siempre que quieras haciend
 temperatura_promedio = (PUNTO_CONGELACION + PUNTO_EBULLICION) / 2.0;
 ```
  
-Al igual que con las reglas aritméticas, las subexpresiones entre paréntesis siempre se calculan primero (en este caso PUNTO_CONGELACION y PUNTO_EBULLICION se suman primero, y luego su suma se divide entre 2.0). Puedes usar tantos paréntesis como necesites y, a menudo, los usamos para mejorar la legibilidad de una expresión, incluso si no alteran el orden de las operaciones. 
+Al igual que con las reglas aritméticas, las subexpresiones entre paréntesis siempre se calculan primero (en este caso PUNTO_CONGELACION y PUNTO_EBULLICION se suman primero, y luego su suma se divide entre 2.0). Se pueden usar tantos parentesis como se necesiten y, a menudo, los usamos para mejorar la legibilidad de una expresión, incluso si no alteran el orden de las operaciones. 
 
 
 Cuando una expresión aritmética tiene varios operadores binarios con la misma prioridad, su orden de agrupamiento (o asociatividad) es de izquierda a derecha. La expresión:

@@ -1,7 +1,9 @@
+# Funciones
+
 Una función es una colección **reusable** de instrucciones ejecutadas de manera secuencial designada para realizar alguna tarea específica.
 
 La sintaxis más básica de una función definida por el usuario es la siguiente:
-```
+```c++
 Tipo_de_output Nombre_de_la_función() // Este es el encabezado de la función (le avisa al compilador que la función existe)
 {
     // Este es el cuerpo de la función (le dice al compilador lo que la función hace)
@@ -79,7 +81,7 @@ int main()
 }
 ```
 
-## Funciones que regresan valores
+## Funciones Que Regresan Valores 
 Consideremos un programa que le pida al usuario dos números enteros y le de como resultado la suma entre ellos:
 ```c++
 #include <iostream>

@@ -1,4 +1,4 @@
-# Coerción de Tipos
+# Coerción De Tipos
 
 Los valores enteros y los valores de punto flotante se almacenan de modo diferente en la memoria de una computadora. El patrón de bits que representa la constante 2 no se parece en absoluto al patrón de bits que representa a la constante 2.0. Entonces, ¿qué sucede si se combinan valores enteros y de punto flotante en una sentencia de asignación o una expresión aritmetica? Por ejemplo, ¿que ocurre si consideramos? : 
 
@@ -30,10 +30,11 @@ float y;
 y = 3 * x + 2;
 x = 5.2 / y - 10.5;
 ```
-En la primera sentencia, tanto 3 como 2 son constantes enteras, y `x` también es un entero. Por lo tanto, la expresión `3 * x + 2` se evalúa completamente usando aritmética entera. El resultado de esa expresión es un entero, pero como el valor final debe almacenarse en `y`, que es de tipo `float`, el compilador convierte automáticamente ese entero a un valor de punto flotante antes de asignarlo. Lo mismo ocurre con la segunda sentencia: las constantes 5.2 y 10.5 son valores de punto flotante. Como `y` también es de tipo `float`, las operaciones se realizan utilizando aritmética de punto flotante. El resultado de la expresión es entonces un valor `float`. Sin embargo, al asignarlo a `x`, el compilador realiza nuevamente una coerción de tipo: el valor de punto flotante se convierte a entero truncando su parte fraccionaria.
+En la primera sentencia, tanto `3` como `2` son constantes enteras, y `x` también es un entero. Por lo tanto, la expresión `3 * x + 2` se evalúa completamente usando aritmética de números enteros. El resultado de esa expresión es un entero, pero como el valor final debe almacenarse en `y`, que es de tipo `float`, el compilador convierte automáticamente ese entero a un valor de punto flotante antes de asignarlo. Lo mismo ocurre con la segunda sentencia: las constantes `5.2` y `10.5` son valores de punto flotante. Como `y` también es de tipo `float`, las operaciones se realizan utilizando aritmética de punto flotante. El resultado de la expresión es entonces un valor `float`. Sin embargo, al asignarlo a `x`, el compilador realiza nuevamente una coerción de tipo: el valor de punto flotante se convierte a entero truncando su parte fraccionaria.
 
 Puedes hacer que el compilador deduzca automáticamente el tipo de la variable a partir de la expresión con la que se inicializa empleando la palabra reservada `auto`.
-Considera los siguientes dos ejemplos: 
+Por ejemplo: 
+
 ```c++
  long double a{5.0};
     int b{2};

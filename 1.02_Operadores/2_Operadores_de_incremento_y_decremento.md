@@ -1,4 +1,4 @@
-# Operadores de Incremento y Decremento 
+# Operadores De Incremento Y Decremento 
 
 Además de los operadores aritméticos, C++ provee los **operadores de incremento y decremento**:
 - -- Decremento

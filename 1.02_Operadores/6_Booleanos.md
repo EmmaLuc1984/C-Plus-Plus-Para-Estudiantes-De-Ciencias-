@@ -73,7 +73,7 @@ Tu input fue: 1
 ```
 Lo anterior ocurre porque de manera general, en C++ **un entero se convierte en booleano automáticamente** cuando se utiliza en contextos donde se espera un valor booleano, como en condiciones (`if`, `while`), operadores lógicos y retornos de funciones booleanas. La regla es que **0 se convierte en `false`** y **cualquier otro valor se convierte en `true`**.
 
-## Valores de retorno booleanos
+## Valores De Retorno Booleanos
 
 Los valores booleanos a menudo son utilizados como valores de retorno para funciones que verifican alguna condición. Por ejemplo:
 ```c++

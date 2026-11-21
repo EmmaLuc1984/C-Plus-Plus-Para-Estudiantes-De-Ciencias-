@@ -1,3 +1,5 @@
+# Funciones Vacias 
+
 En la introducción de esta sección, ya vimos que la sintaxis más básica de una función definida por el usuario es:
 ```c++
 Tipo_de_output Nombre_de_la_función() // Este es el encabezado de la función (le avisa al compilador que la función existe)

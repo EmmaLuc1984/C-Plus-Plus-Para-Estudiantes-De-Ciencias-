@@ -78,7 +78,7 @@ cout << "Felicidades \"Elden Ring\" por tu salida, saliste del videojuego"
 ```
 
 
-## Formateo de Salida en Consola
+## Formateo De Salida En Consola
 
 Normalmente, las sentencias de salida sucesivas causan que la salida continúe a lo largo de la misma línea de la pantalla. La secuencia:
 
@@ -176,6 +176,14 @@ cout << "Estoy jugando a " << endl << endl
 ```
 
 En este último se muestra que es posible extender una sola sentencia de C++ en más de una línea del programa. El compilador no trata el salto de línea físico como el final de la instrucción, sino al punto y coma `;` como el fin de la sentencia. Y si, por si te lo preguntas, todo esto funciona exactamente igual usando `\n`. 
+
+
+
+![Tears Of The Kingdom](https://github.com/EmmaLuc1984/C-plus-plus-para-principiantes-parte-2/blob/main/61GNR%2Bq5jfL._AC_UF1000%2C1000_QL80_.jpg)]
+
+
+
+
 
 
 Para terminar, tambien podemos controlar el espaciamiento horizontal de la salida, una técnica es enviar caracteres extra en blanco al flujo de salida.

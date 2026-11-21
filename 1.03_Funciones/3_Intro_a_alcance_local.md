@@ -1,3 +1,5 @@
+# Alcance Local 
+
 Una **variable local** es una variable definida dentro del cuerpo de una función.
 
 Recordemos que un parámetro de una función es una variable definida dentro de los paréntesis que van después del nombre de la función, a estos generalmente también se les considera como variables locales.
@@ -98,7 +100,7 @@ Lo importante de lo anterior es:
 * Es posible (y a veces necesario) usar el mismo identificador para variables que pretendemos que guarden valores diferentes.
 * Lo anterior lo podemos hacer sin ningún problema siempre y cuando lo hagamos en bloques de código ajenos (en el contexto de los ejemplos anteriores: dentro de funciones distintas). Un bloque de código es aquel que inicia con un `{` y termina con un `}`.
 
-## Parámetros de funciones vs. Variables locales
+## Parámetros De Funciones vs. Variables Locales
 
 Aunque a los parámetros de funciones también se les considera *variables locales*, en la práctica cuando nos referimos a una variable local, nos estamos refiriendo específicamente a algo dentro del cuerpo de una función:
 ```c++
