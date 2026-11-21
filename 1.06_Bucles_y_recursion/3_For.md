@@ -33,7 +33,7 @@ En el programa anterior:
 
 De este modo, el programa anterior imprimió: `1 2 3 4 5 6 7 8 9 10`.
 
-## Algunas variaciones útiles en la `expresión-final`
+## Algunas Variaciones Útiles En La `expresión-final`
 
 Aunque es lo más común, la `expresión-final` no tiene por qué limitarse a sólo incrementar en 1 la variable que estemos usando para contar las iteraciones de nuestro ciclo.
 
@@ -91,7 +91,7 @@ En general, la `expresión-final` en un ciclo `for` no está limitada a simples 
 * Actualización de múltiples variables simultáneamente (esto lo veremos en las próximas líneas).
 * Control de iteradores en contenedores (esto es útil cuando trabajamos con vectores y matrices).
 
-## Expresiones omitidas
+## Expresiones Omitidas
 
 Es posible escribir ciclos `for` que omitan alguna (algunas o todas) de las 3 expresiones en su encabezado.
 
@@ -150,7 +150,7 @@ int main()
 } 
 ```
 
-## Ciclos `for` con múltiples contadores
+## Ciclos `for` Con Múltiples Contadores
 
 Aunque por lo general los ciclos `for` iteran sobre una sola variable, a veces es necesario definir un ciclo `for` que trabaje con múltiples variables. Para ello, se definen las variables que se van a usar en la `inicialización` (separadas por comas) y la forma en que vamos a modificarlas en cada iteración en la `expresión-final` (nuevamente, separadas por comas). 
 
@@ -183,7 +183,7 @@ En consola se imprime:
 9 0
 ```
 
-## Ciclos `for` anidados
+## Ciclos `for` Anidados
 
 Así como en otros tipos de ciclos, es posible hacer ciclos `for` anidados. 
 

@@ -41,7 +41,7 @@ En este programa:
 4. El control regresa a la parte superior de la declaración `while` y la condición `contador <= 10` se evalúa nuevamente. Si al evaluarla obtenemos `true`, el paso **3.** se repite.
 5. El ciclo se va a ejecutar hasta que `contador == 11`, porque `11 <= 10` es `false`. Así, las declaraciones dentro del ciclo serán ignoradas por el programa y éste saltará hasta la línea `std::cout << "¡listo!\n";`.
 
-## Ciclos `while` que se ejecutan infinitas veces
+## Ciclos `while` Que Se Ejecutan Infinitas Veces
 
 Observemos que, si en vez de inicializar la variable `contador` como `1`, la hubiéramos inicializado con un valor mayor que `10` (digamos `24`): 
 ```c++
@@ -92,7 +92,7 @@ int main()
 ```
 Como `contador` inicia con el valor `5` y `5 <= 10` es siempre `true`, el ciclo se ejecuta infinitas veces. Al correr el programa anterior (podemos hacerlo sin miedo, la computadora no explota) se imprime `5 5 5 5 5 5 5 5 5 5 5 5 5 5 ...` hasta que de manera manual obliguemos al programa a detenerse.
 
-### Ciclos `while` infinitos hechos de manera intencional
+### Ciclos `while` Infinitos Hechos De Manera Intencional
 Si tenemos la explícita intención de crear un ciclo `while` infinito, podemos hacerlo de la siguiente manera:
 ```c++
 while (true)
@@ -137,7 +137,7 @@ Los **ciclos infinitos intencionales** son bastante comunes en ciertos tipos de 
 ![Elden-Ring-a-lair-genial-en-15-minutes-daction-de](https://github.com/user-attachments/assets/6938d61f-c1fb-4679-9b94-435a2d8a9c79)
 *Ah, que bonito es Elden Ring.*
 
-## Nombrar variables en bucles
+## Nombrar Variables En Bucles
 
 Una **variable de bucle** (*loop variable*) es una variable que sirve para controlar cuántas veces un ciclo es ejecutado. En uno de los ejemplos anteriores, la variable `contador` cumplía esta función, de este modo `contador` es una variable de bucle. Lo más común es que este tipo de variables sean de tipo `int`, pero no es inusual encontrarnos con otros tipos (como `char`).
 
@@ -145,7 +145,7 @@ Con frecuencia se usan nombres simples para las variables de bucle (siendo `i`, 
 
 Las variables de bucle más comunes son aquellas que sirven de contadores (la variable `contador` en algunos de los ejemplos anteriores cumplía esta función), ya que estas nos permiten mantener un registro de las veces que se ha ejecutado nuestro ciclo.
 
-## Hacer algo cada `N` iteraciones
+## Hacer Algo Cada `N` Iteraciones
 Cada vez que un ciclo se ejecuta, decimos que iteró una vez.
 
 A menudo, queremos hacer algo cada 2, 3, 4 ó N iteraciones. Esto se puede hacer mediante el uso del operador residuo (`%`, también llamado módulo) aplicado a nuestro contador:
@@ -201,7 +201,7 @@ Este operador:
 
 Por ejemplo: `int residuo{-10 % 3};` y `int residuo{-10 % -3};` definen e inicializan con el valor `-1` a `residuo`. Pero `int residuo{10 % -3};` define e inicializa con el valor `1` a `residuo` porque el signo negativo en el divisor (`-3`) no afecta el resultado.
 
-## Bucles anidados
+## Bucles Anidados
 Al igual que en funciones y declaraciones condicionales, es posible anidar bucles.
 
 Veamos un ejemplo de un programa que imprime la carita `ლ(́◉◞౪◟◉‵ლ)` en forma de un rectángulo de medidas dadas por el usuario:

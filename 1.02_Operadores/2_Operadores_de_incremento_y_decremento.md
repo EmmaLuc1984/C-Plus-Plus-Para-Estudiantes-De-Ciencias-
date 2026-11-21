@@ -35,7 +35,7 @@ O equivalentemente:
 dias_hasta_vacaciones--;
 ```
 
-Ya has visto como funcionan `++` y `--` cuando los ponemos a la derecha de las variables (en la literatura lo puedes encontrar como *postfijo* o *sufijo*). Sin embargo, ambos operadores también pueden colocarse a la izquierda de una variable (como operadores de prefijo), asi: 
+Ya has visto como funcionan `++` y `--` cuando los ponemos a la derecha de las variables (en la literatura lo puedes encontrar como *postfijo* o *sufijo*, y a los operadores como *operadores de post-incremento/decremento*). Sin embargo, ambos operadores también pueden colocarse a la izquierda de una variable (como operadores de *prefijo o pre-incremento/decremento*), asi: 
 
 ``` c++
 ++contador_de_ovejas;

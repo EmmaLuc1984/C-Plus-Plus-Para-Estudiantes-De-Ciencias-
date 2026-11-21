@@ -130,7 +130,7 @@ else
 ```
 como nuestra forma 'canónica' para las declaraciones `if`-`else`.
 
-## Bloques implícitos
+## Bloques Implícitos
 
 Para el compilador, esto
 ```c++
@@ -194,7 +194,7 @@ int main()
 En este contexto, la variable `x` tiene alcance sólo dentro de cada bloque donde es definida y es destruida al final de éste (en [1.3](../1.3_Funciones_basicas/3_Intro_a_alcance_local.md) ya hablamos un poco sobre qué es el alcance de una variable). Para cuando llegamos a la línea `std::cout << x << '\n';` la variable `x` ya no existe y el programa no tiene nada para imprimir en pantalla.
 
 
-## Declaraciones `if` anidadas
+## Declaraciones `if` Anidadas
 
 En C++ está permitido hacer declaraciones `if` dentro de declaraciones `if`:
 ```c++

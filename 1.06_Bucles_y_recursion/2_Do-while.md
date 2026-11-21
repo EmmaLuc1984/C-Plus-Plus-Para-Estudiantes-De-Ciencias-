@@ -42,7 +42,7 @@ Como usamos un ciclo `do-while` en vez de un `while`, aún si la condición no s
 El valor de i es: 10
 ```
 
-## ¿Cuándo usar `do-while` y cuándo usar `while`?
+## ¿Cuándo Usar `do-while` Y Cuándo Usar `while`?
 Es conveniente usar `do-while` si necesitamos ejecutar el bloque de código al menos una vez, sin importar si la condición es verdadera o falsa desde el principio.
 
 Algunas situaciones donde sería mejor usar un `do-while` en vez de un `while` son:

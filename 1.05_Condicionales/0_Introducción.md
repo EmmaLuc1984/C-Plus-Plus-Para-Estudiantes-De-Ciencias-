@@ -116,7 +116,7 @@ int main()
 }
 ```
 
-## Encadenamiento de condiciones `if`
+## Encadenamiento De Condiciones `if`
 
 A veces queremos evaluar el valor de verdad de varios enunciados en una secuencia. Esto lo podemos hacer encadenando una declaración `if` (o una `if-else`) a una `if` anterior. Por ejemplo:
 ```c++
@@ -207,7 +207,7 @@ Dame un entero: 500
 Es mayor que 5.
 ```
 
-## Declaraciones `if` y devoluciones anticipadas.
+## Declaraciones `if` Y Devoluciones Anticipadas.
 
 Como ya vimos en [la sección sobre funciones](../1.3_Funciones_basicas/0_Introducción.md), usualmente, una declaración `return` es la última instrucción de una función; a una declaración `return` que no es la última instrucción de una función la llamamos **devolución anticipada** (*early return*). Una declaración de este tipo hará que la función vuelva a su llamador una vez que lleguemos a la línea donde está `return` aún si después de esta hay más instrucciones.
 

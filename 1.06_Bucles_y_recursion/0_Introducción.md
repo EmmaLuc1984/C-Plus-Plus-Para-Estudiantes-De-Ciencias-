@@ -9,7 +9,7 @@ En C++ existen esencialmente tres tipos de bucles:
 
 Los veremos con detenimiento más adelante.
 
-## Un breve interludio sobre recursión
+## Un Breve Interludio Sobre Recursión
 
 La **recursión** en programación es una técnica donde una función se llama a sí misma para resolver un problema más grande descomponiéndolo en problemas más pequeños del mismo tipo. Un ejemplo clásico de una función recursiva es *el factorial* ya que: dado $n \in \mathbb{N}$...
 1. $n! = 1$, si $n=0$
@@ -56,43 +56,9 @@ El **desbordamiento de pila** (en inglés: *stack overflow*) es un error que ocu
 
 Un desbordamiento de pila ocurre a menudo debido a **recursión infinita**, donde una función sigue llamándose a sí misma sin un caso base que termine la recursión. 
 
-## Operadores pre-incremento (`++i`) y pre-decremento (`--i`)
+## Uso Operadores (`++i`) y (`--i`) En Bucles
 
-En C++ (y en el mundo de la programación en general) incrementar o decrementar alguna variable entera en una unidad es tan común que dichas acciones tienen sus propios operadores: El **operador incremento (`++`)** y el **operador decremento (`--`)**.
-
-Hay 2 formas de usar al operador `++`: **pre-incremento** y **post-incremento**. De manera análoga tenemos el **pre-decremento** y **post-decremento** para `--`.
-
-Dado que el objetivo de esta sección no es explicar a detalle el funcionamiento de estos dos operadores, vamos a centrarnos solamente en el **pre-incremento (`++i`) y pre-decremento (`--i`)**, que son las variantes más relevantes para bucles.
-
-1. El **operador pre-incremento (`++i`):** Dada una variable entera `i`, `++i` incrementa el valor de `i` en 1 antes de que sea utilizada en cualquier otra operación.
-```c++
-#include <iostream>
-
-int main()
-{
-    int x { 5 }; // Definimos la variable `x` y la inicializamos con valor 5
-    ++x; // `x` es incrementada en 1
-
-    std::cout << "La variable vale " << x << '\n'; // El valor de `x` es ahora 6
-    return 0;
-}
-```
-En el ejemplo anterior, la variable `x` fue incrementada antes de ser impresa en consola.
-
-2. El **operador pre-decremento (`--i`):** De manera muy similar a `++i`, dada una variable entera `i`, `--i` decrementa el valor de `i` en 1 antes de que sea utilizada en cualquier otra operación.
-```c++
-#include <iostream>
-
-int main() {
-    int a{10}; // `a` es definida e inicializada con valor 10
-    int b{--a};  // Primero decrementa `a` a 9, luego asigna 9 a `b`
-
-    std::cout << "a: " << a << '\n';  // `a` es 9
-    std::cout << "b: " << b << '\n';  // `b` también es 9
-
-    return 0;
-}
-```
+En [la lección](https://github.com/EmmaLuc1984/C-Plus-Plus-Para-Estudiantes-De-Ciencias-/blob/main/1.02_Operadores/2_Operadores_de_incremento_y_decremento.md) vimos como es que funcionan los operadores `++` y `--` tanto si los usamos como prefijo como sufijo (tambiien llamados operadores pre/post-incremento (decremento))
 
 En el contexto de bucles, los operadores pre-incremento y pre-decremento se utilizan principalmente para manejar contadores, pero también pueden tener usos en la manipulación de índices, parámetros y condiciones.
 

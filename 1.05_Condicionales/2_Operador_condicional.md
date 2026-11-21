@@ -22,7 +22,7 @@ Si la `condición` se verifica, entonces la `expresión1` es evaluada, en otro c
 
 El operador condicional tiene algunas diferencias importantes con las declaraciones `if`-`else`:
 
-### 1. El operador condicional es más conciso
+### 1. El Operador Condicional Es Más Conciso
 
 Esto:
 ```c++
@@ -49,7 +49,7 @@ son equivalentes.
 
 O sea, el operador condicional es más conciso que una declaración `if`-`else` porque nos permite hacer lo mismo en menos líneas de código.
 
-### 2. El operador condicional es evaluado como una expresión
+### 2. El Operador Condicional Es Evaluado Como Una Expresión
 
 En C++ (entre muchas otras cosas) tenemos **expresiones** y **declaraciones**.
 
@@ -150,7 +150,7 @@ int main()
 
 Ambos códigos hacen en esencia lo mismo, pero el segundo tiene más líneas de código (recordemos que los comentarios no son líneas de código) y complejidad que podemos evitar si usamos el primero.
 
-## Uso de paréntesis en el operador condicional
+## Uso De Paréntesis En El Operador Condicional
 
 Como C++ prioriza la evaluación de la mayoría de los operadores por encima de la evaluación del operador condicional, es fácil escribir código usando el operador condicional que termina siendo evaluado de forma distinta a la que queremos. Por ejemplo:
 ```c++
@@ -203,7 +203,7 @@ std::cout << (esTarde() ? "PM" : "AM"); // Aquí sí pusimos al operador
 ```
 En el segundo ejemplo, si no usamos paréntesis, la expresión se evaluaría como: `(std::cout << esTarde()) ? "PM" : "AM";`... que evidentemente no es lo que queríamos.
 
-## El tipo de las expresiones debe coincidir (o ser convertible)
+## El Tipo De Las Expresiones Debe Coincidir (O Ser Convertible)
 
 Cuando hagamos uso del operador condicional:
 ```c++
@@ -252,7 +252,7 @@ int main()
 }
 ```
 
-## ¿Cuándo uso el operador condicional?
+## ¿Cuándo Uso El Operador Condicional?
 
 Es conveniente usar el operador condicional cuando:
 * Queramos inicializar un objeto con uno de dos valores.
