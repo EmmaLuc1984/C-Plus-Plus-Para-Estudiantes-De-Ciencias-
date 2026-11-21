@@ -179,8 +179,8 @@ En este último se muestra que es posible extender una sola sentencia de C++ en 
 
 
 
-![Tears Of The Kingdom](https://github.com/EmmaLuc1984/C-plus-plus-para-principiantes-parte-2/blob/main/61GNR%2Bq5jfL._AC_UF1000%2C1000_QL80_.jpg)]
-
+![Tears Of The Kingdom](https://github.com/EmmaLuc1984/C-plus-plus-para-principiantes-parte-2/blob/main/61GNR%2Bq5jfL._AC_UF1000%2C1000_QL80_.jpg)
+*La maravilla que es Tears of the Kingdom.*
 
 
 
