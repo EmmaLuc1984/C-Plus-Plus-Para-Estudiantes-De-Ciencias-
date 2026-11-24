@@ -1,0 +1,87 @@
+<svg width="900" height="260" viewBox="0 0 900 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #0d1117; }
+    .border { stroke: #30363d; stroke-width: 2; }
+    
+    /* Animación de flotación suave para el logo C++ */
+    @keyframes float {
+      0%, 100% { transform: translate(55px, 68px); }
+      50% { transform: translate(55px, 56px); }
+    }
+    .floating-logo { animation: float 3.5s ease-in-out infinite; }
+
+    /* Pulso de líneas de circuito */
+    @keyframes pulse {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 1; }
+    }
+    .circuit { stroke: #58a6ff; stroke-width: 1.5; animation: pulse 3s infinite; }
+    .circuit-gold { stroke: #d29922; stroke-width: 1.5; animation: pulse 3s 1.5s infinite; }
+
+    /* Cursor parpadeante */
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    .cursor { animation: blink 1s step-end infinite; }
+  </style>
+
+  
+  <rect x="1" y="1" width="898" height="258" rx="12" class="bg border" />
+
+  
+  <path d="M 0 28 L 190 28 L 210 48 L 360 48" class="circuit" fill="none" />
+  <circle cx="360" cy="48" r="3" fill="#58a6ff" />
+  
+  <path d="M 900 232 L 620 232 L 600 212 L 450 212" class="circuit-gold" fill="none" />
+  <circle cx="450" cy="212" r="3" fill="#d29922" />
+
+  
+  <g class="floating-logo">
+    
+    <polygon points="55,0 110,31 110,93 55,124 0,93 0,31" fill="#00599c" />
+    <polygon points="55,0 110,31 110,93 55,124" fill="#004482" opacity="0.75" />
+    <polygon points="55,62 110,93 55,124 0,93" fill="#659ad2" opacity="0.35" />
+    <text x="55" y="76" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="44" fill="#ffffff">C++</text>
+  </g>
+
+  
+  <g transform="translate(195, 72)">
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="14" fill="#d29922" letter-spacing="1.2">FACULTAD DE CIENCIAS • UNAM</text>
+    <text x="0" y="36" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="24" fill="#ffffff">Taller de Herramientas</text>
+    <text x="0" y="66" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="24" fill="#ffffff">Computacionales</text>
+
+    
+    <g transform="translate(0, 88)">
+      <rect x="0" y="0" width="205" height="30" rx="6" fill="#58a6ff" />
+      <text x="14" y="20" font-family="Courier New, monospace" font-weight="bold" font-size="14" fill="#0d1117">&gt;_ MATERIAL DE C++</text>
+      <rect x="184" y="8" width="8" height="14" fill="#0d1117" class="cursor" />
+    </g>
+  </g>
+
+  
+  <g transform="translate(510, 35)">
+    
+    <rect x="0" y="0" width="355" height="182" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5" />
+    
+    
+    <circle cx="16" cy="15" r="4.5" fill="#ff5f56" />
+    <circle cx="30" cy="15" r="4.5" fill="#ffbd2e" />
+    <circle cx="44" cy="15" r="4.5" fill="#27c93f" />
+    <text x="178" y="19" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#8b949e">hola_mundo.cpp</text>
+    <line x1="0" y1="30" x2="355" y2="30" stroke="#30363d" stroke-width="1" />
+
+    
+    <text x="16" y="54" font-family="Courier New, monospace" font-size="13.5" fill="#ff7b72">#include <tspan fill="#a5d6ff">&lt;iostream&gt;</tspan></text>
+    
+    <text x="16" y="82" font-family="Courier New, monospace" font-size="13.5" fill="#ff7b72">int <tspan fill="#d2a8ff">main</tspan><tspan fill="#c9d1d9">() {</tspan></text>
+    
+    <text x="34" y="106" font-family="Courier New, monospace" font-size="13.5" fill="#79c0ff">std<tspan fill="#c9d1d9">::cout &lt;&lt; </tspan><tspan fill="#a5d6ff">"Hola Mundo!"</tspan><tspan fill="#c9d1d9">;</tspan></text>
+    
+    <text x="34" y="130" font-family="Courier New, monospace" font-size="13.5" fill="#ff7b72">return <tspan fill="#79c0ff">0</tspan><tspan fill="#c9d1d9">;</tspan></text>
+    
+    <text x="16" y="154" font-family="Courier New, monospace" font-size="13.5" fill="#c9d1d9">}</text>
+
+    
+    <rect x="28" y="142" width="7" height="14" fill="#58a6ff" class="cursor" />
+  </g>
+</svg>
