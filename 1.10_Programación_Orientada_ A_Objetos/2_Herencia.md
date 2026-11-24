@@ -252,3 +252,283 @@ Incrementando tiempo2:
 00:00:00 PST 00:00:01 PST 00:00:02 PST 00:00:03 PST 00:00:04 PST
 ```
 
+## Implementación De La Clase `Tiempo_extendido`
+
+La implementación de `Tiempo_extendido` debe centrarse únicamente en las características que la diferencian de su clase base, `Tiempo`. Por lo tanto, es necesario definir los constructores y proporcionar implementaciones propias de las funciones `establecer` y `escribir`, así como de la función que permite consultar el huso horario.
+
+En las clases derivadas, los constructores siguen ciertas reglas particulares. Cuando se crea un objeto de una clase derivada, *el constructor de la clase base se ejecuta antes que el cuerpo del constructor de la clase derivada*. Además, cuando el constructor de la clase base requiere argumentos, estos deben proporcionarse explícitamente desde el constructor de la clase derivada.
+
+Para comprender cómo se aplican estas reglas, examinemos el archivo de implementación `tiempo_extendido.cpp`.
+
+
+```cpp
+//***************************************************************************
+// ARCHIVO DE IMPLEMENTACIÓN: tiempo_extendido.cpp
+// Este archivo contiene las definiciones de las funciones miembro
+// de la clase Tiempo_extendido.
+//
+// Tiempo es la clase base pública de Tiempo_extendido.
+//***************************************************************************
+
+#include "tiempo_extendido.h"
+#include <iostream>
+#include <string>
+
+//***************************************************************************
+// Constructor con argumentos
+//
+// Precondición:
+// 0 <= horas_iniciales <= 23,
+// 0 <= minutos_iniciales <= 59 y
+// 0 <= segundos_iniciales <= 59.
+// zona_inicial debe ser un valor válido de Tipo_zona_horaria.
+//
+// Poscondición:
+// El tiempo se establece mediante el constructor de la clase base
+// y el huso horario se establece de acuerdo con zona_inicial.
+//***************************************************************************
+
+Tiempo_extendido::Tiempo_extendido(
+    int horas_iniciales,
+    int minutos_iniciales,
+    int segundos_iniciales,
+    Tipo_zona_horaria zona_inicial)
+    : Tiempo(horas_iniciales, minutos_iniciales, segundos_iniciales)
+{
+    zona_horaria = zona_inicial;
+}
+
+//***************************************************************************
+// Constructor por omisión
+//
+// Poscondición:
+// El tiempo se establece en 00:00:00 mediante el constructor por
+// omisión de la clase base y el huso horario se establece en EST.
+//***************************************************************************
+
+Tiempo_extendido::Tiempo_extendido()
+{
+    zona_horaria = est;
+}
+
+//***************************************************************************
+// Función establecer
+//
+// Precondición:
+// 0 <= horas <= 23,
+// 0 <= minutos <= 59 y
+// 0 <= segundos <= 59.
+// zona debe ser un valor válido de Tipo_zona_horaria.
+//
+// Poscondición:
+// El tiempo se establece de acuerdo con los argumentos recibidos
+// y el huso horario se actualiza con el valor de zona.
+//***************************************************************************
+
+void Tiempo_extendido::establecer(
+    int horas,
+    int minutos,
+    int segundos,
+    Tipo_zona_horaria zona)
+{
+    Tiempo::establecer(horas, minutos, segundos);
+    zona_horaria = zona;
+}
+
+//***************************************************************************
+// Función obtener_zona_horaria
+//
+// Poscondición:
+// El valor devuelto corresponde al huso horario del objeto.
+//***************************************************************************
+
+Tipo_zona_horaria Tiempo_extendido::obtener_zona_horaria() const
+{
+    return zona_horaria;
+}
+
+//***************************************************************************
+// Función escribir
+//
+// Poscondición:
+// Se muestra el tiempo en el formato HH:MM:SS ZZZ,
+// donde ZZZ representa la abreviatura del huso horario.
+//***************************************************************************
+
+void Tiempo_extendido::escribir() const
+{
+    static const std::string nombres_zonas[8] =
+    {
+        "EST", "CST", "MST", "PST",
+        "EDT", "CDT", "MDT", "PDT"
+    };
+
+    Tiempo::escribir();
+    std::cout << ' ' << nombres_zonas[zona_horaria];
+}
+```
+
+
+Observa como un constructor transmite argumentos a su constructor de clase base:
+
+```cpp
+Tiempo_extendido::Tiempo_extendido(
+    int horas_iniciales,
+    int minutos_iniciales,
+    int segundos_iniciales,
+    Tipo_zona_horaria zona_inicial)
+    : Tiempo(horas_iniciales, minutos_iniciales, segundos_iniciales)
+{
+    zona_horaria = zona_inicial;
+}
+```
+
+Después de la lista de parámetros del constructor y antes de su cuerpo, se escribe una *lista de inicialización*, que comienza con dos puntos (`:`), seguida del nombre de la clase base y los argumentos que recibirá su constructor.
+
+Ahora supongamos que creamos un objeto mediante la siguiente declaración:
+
+```cpp
+Tiempo_extendido tiempo1(8, 35, 0, pst);
+```
+
+En este caso, el constructor de `Tiempo_extendido` recibe cuatro argumentos. Los tres primeros se transmiten al constructor de `Tiempo` mediante la lista de inicialización. Una vez que termina la construcción del subobjeto correspondiente a la clase base, se ejecuta el cuerpo del constructor de `Tiempo_extendido`, donde se asigna el cuarto argumento al miembro `zona_horaria`.
+
+De esta manera, cada clase se encarga de inicializar la parte del objeto que le corresponde: `Tiempo` establece las horas, los minutos y los segundos, mientras que `Tiempo_extendido` asigna el huso horario.
+
+El segundo constructor, que corresponde al constructor por omisión, no necesita una lista de inicialización explícita para la clase base, ya que no hay argumentos que transmitir:
+
+```cpp
+Tiempo_extendido::Tiempo_extendido()
+{
+    zona_horaria = est;
+}
+```
+
+Cuando se crea un objeto mediante una declaración como:
+
+```cpp
+Tiempo_extendido tiempo2;
+```
+
+se invoca automáticamente el constructor por omisión de `Tiempo`. Este establece la hora en `00:00:00`. Posteriormente, se ejecuta el cuerpo del constructor de `Tiempo_extendido`, que asigna `est` al miembro `zona_horaria`, estableciendo así el huso horario `EST`.
+
+Ahora examinemos la función `establecer`. Esta proporciona una versión propia de la operación heredada de `Tiempo`, adaptada para recibir también un argumento que indique el huso horario.
+
+Por lo tanto, existen dos funciones con el mismo nombre: una pertenece a la clase base y otra a la clase derivada. Podemos distinguirlas mediante sus nombres completos: `Tiempo::establecer` y `Tiempo_extendido::establecer`.
+
+La implementación de la función de la clase derivada comienza invocando explícitamente la operación correspondiente de la clase base:
+
+```cpp
+void Tiempo_extendido::establecer(
+    int horas,
+    int minutos,
+    int segundos,
+    Tipo_zona_horaria zona)
+{
+    Tiempo::establecer(horas, minutos, segundos);
+    zona_horaria = zona;
+}
+```
+
+La llamada a `Tiempo::establecer` permite actualizar las horas, los minutos y los segundos. Esto es necesario porque los miembros privados de `Tiempo` no pueden manipularse directamente desde las funciones miembro de `Tiempo_extendido`.
+
+Después de establecer la hora mediante la operación heredada, se asigna el valor recibido al miembro privado `zona_horaria`, que pertenece exclusivamente a la clase derivada.
+
+Así, `Tiempo_extendido` aprovecha la funcionalidad existente en `Tiempo` para establecer la hora y añade únicamente el comportamiento necesario para almacenar el huso horario.
+
+La función `escribir` sigue un procedimiento semejante al de `establecer`: primero utiliza la operación de la clase base para mostrar las horas, los minutos y los segundos, y después añade la abreviatura correspondiente al huso horario.
+
+```cpp
+void Tiempo_extendido::escribir() const
+{
+    static const std::string nombres_zonas[8] =
+    {
+        "EST", "CST", "MST", "PST",
+        "EDT", "CDT", "MDT", "PDT"
+    };
+
+    Tiempo::escribir();
+    std::cout << ' ' << nombres_zonas[zona_horaria];
+}
+```
+
+Para mostrar el huso horario, se utiliza un arreglo de ocho cadenas de caracteres llamado `nombres_zonas`. Cada posición contiene una de las abreviaturas disponibles: `EST`, `CST`, `MST`, `PST`, `EDT`, `CDT`, `MDT` y `PDT`.
+
+La utilización de este arreglo es necesaria porque los valores de un tipo enumerado no se muestran directamente mediante sus nombres. Por ejemplo, si intentáramos imprimir directamente el valor de `zona_horaria`, obtendríamos su representación numérica, que en este caso corresponde a un entero entre 0 y 7. Esto sucede porque los enumeradores se representan internamente mediante valores enteros consecutivos, comenzando desde cero cuando no se especifican otros valores.
+
+Para obtener la abreviatura correspondiente, se utiliza el valor de `zona_horaria` como índice del arreglo. De esta manera, cada valor de la enumeración permite seleccionar la cadena asociada a su huso horario.
+
+Por otra parte, el arreglo `nombres_zonas` se declara con el especificador `static`. Esto significa que su almacenamiento tiene duración estática: no se crea y destruye en cada llamada a la función, sino que permanece durante toda la ejecución del programa. Su inicialización se realiza cuando el flujo de ejecución alcanza por primera vez su declaración. Así, se evita repetir la creación del arreglo cada vez que se invoca `escribir`. Además, el especificador `const` impide modificar las cadenas almacenadas.
+
+## Compilación Y Enlace Del Programa
+
+Una vez terminado el archivo de implementación `tiempo_extendido.cpp`, podemos compilarlo para generar su correspondiente archivo de código objeto, por ejemplo, `tiempo_extendido.obj`.
+
+De igual manera, después de escribir un programa de prueba en el archivo `pruebas.cpp`, podemos compilarlo para obtener `pruebas.obj`.
+
+Finalmente, para generar el archivo ejecutable, es necesario enlazar los tres archivos de código objeto:
+
+1. `pruebas.obj`: contiene el código del programa de prueba.
+2. `tiempo_extendido.obj`: contiene la implementación de la clase derivada.
+3. `tiempo.obj`: contiene la implementación de la clase base.
+
+Una vez realizado el enlace, obtenemos un programa ejecutable que permite comprobar el funcionamiento de la clase `Tiempo_extendido`.
+
+Una de las principales ventajas de la herencia es que permite ampliar las funcionalidades de una clase sin necesidad de modificar su implementación original. Incluso cuando no se dispone del código fuente de la clase base, es posible desarrollar nuevas clases a partir de ella, siempre que se cuente con los archivos necesarios para su declaración y enlace.
+
+Por ejemplo, una clase como `Tiempo` puede utilizarse directamente en distintos programas o servir como punto de partida para crear versiones más especializadas, como `Tiempo_extendido`. De esta manera, los lenguajes orientados a objetos facilitan la **reutilización de código**, ya que permiten aprovechar las operaciones existentes y adaptarlas a nuevas necesidades.
+
+La herencia también permite construir **abstracciones de datos extensibles**. Esto significa que una clase derivada puede ampliar las capacidades de su clase base mediante la incorporación de nuevos miembros privados, nuevas operaciones públicas o ambas cosas. Al mismo tiempo, conserva las funcionalidades heredadas que siguen siendo necesarias, evitando tener que implementarlas nuevamente.
+
+
+## Evitar Inclusiones Múltiples De Archivos De Encabezado
+
+Anteriormente, vimos que el archivo de especificación `tiempo_extendido.h` incluye `tiempo.h` para disponer de la declaración de la clase `Tiempo`:
+
+```cpp
+#include "tiempo.h"
+
+enum Tipo_zona_horaria
+{
+    est, cst, mst, pst,
+    edt, cdt, mdt, pdt
+};
+
+class Tiempo_extendido : public Tiempo
+{
+    // ...
+};
+```
+
+Supongamos que un programador incluye ambos archivos en su programa:
+
+```cpp
+#include "tiempo.h"
+#include "tiempo_extendido.h"
+```
+
+En este caso, `tiempo.h` se procesa dos veces: primero por su inclusión directa y después porque `tiempo_extendido.h` también lo incluye. Esto provoca un error de compilación, ya que la clase `Tiempo` queda declarada más de una vez.
+
+Para evitar este problema, utilizamos algo conocido como **guardas de inclusión**, que impiden procesar varias veces el contenido de un mismo archivo de encabezado. Para implementarlas, podemos modificar `tiempo.h` de la siguiente manera:
+
+```cpp
+#ifndef TIEMPO_H
+#define TIEMPO_H
+
+class Tiempo
+{
+    // ...
+};
+
+#endif // TIEMPO_H
+```
+
+Las directivas `#ifndef` y `#define` trabajan conjuntamente para controlar la inclusión del archivo. En este caso, `TIEMPO_H` es una **macro del preprocesador** que funciona como una marca para indicar si el archivo ya fue procesado.
+
+Su funcionamiento es sencillo:
+
+1. `#ifndef TIEMPO_H` comprueba si la macro `TIEMPO_H` aún no ha sido definida.
+2. Si no está definida, `#define TIEMPO_H` la registra y permite procesar el contenido del archivo.
+3. Cuando se intenta incluir nuevamente el archivo, la macro ya está definida y el contenido protegido se omite.
+
+De esta manera, se evita que las declaraciones de una clase se procesen varias veces, previniendo errores de redefinición durante la compilación.
