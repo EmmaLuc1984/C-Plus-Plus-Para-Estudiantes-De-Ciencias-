@@ -32,10 +32,10 @@ Para completar la declaración de la clase en C++, también se definió su secci
 
 Esta representación permitió mantener la información encapsulada y controlar su manipulación mediante las funciones miembro públicas. Aunque la elección de una representación concreta corresponde conceptualmente a la etapa de implementación, fue necesario establecerla desde la declaración de la clase para satisfacer los requisitos de la sintaxis de C++.
 
-Finalmente, se organizó el desarrollo mediante la separación de la especificación y la implementación. La declaración de la clase `Nombre`, junto con el tipo de enumeración `TipoRelacion`, se colocó en un archivo de encabezado con extensión `.h`. Esta la puedes escontrar [aquí.]()
+Finalmente, se organizó el desarrollo mediante la separación de la especificación y la implementación. La declaración de la clase `Nombre`, junto con el tipo de enumeración `TipoRelacion`, se colocó en un archivo de encabezado con extensión `.h`. Esta la puedes escontrar [aquí.](https://github.com/EmmaLuc1984/C-Plus-Plus-Para-Estudiantes-De-Ciencias-/blob/main/1.10_Programaci%C3%B3n_Orientada_%20A_Objetos/Nombre_src/nombre.h)
 
 ## Implementación De `Nombre`
 
 Una vez establecida la representación de los datos de la clase `Nombre`, mediante las variables de tipo `string` `primer_nombre`, `segundo_nombre` y `apellido`, el siguiente paso consiste en implementar sus funciones miembro. Para ello, se colocan sus definiciones en el archivo de implementación `nombre.cpp`.
 
-La implementación de todas estas funciones son tan directas que no es necesaria explicación alguna. Pu8edes ver la implementación [aquí.]()
+La implementación de todas estas funciones son tan directas que no es necesaria explicación alguna. Pu8edes ver la implementación [aquí.](https://github.com/EmmaLuc1984/C-Plus-Plus-Para-Estudiantes-De-Ciencias-/blob/main/1.10_Programaci%C3%B3n_Orientada_%20A_Objetos/Nombre_src/nombre.cpp)
