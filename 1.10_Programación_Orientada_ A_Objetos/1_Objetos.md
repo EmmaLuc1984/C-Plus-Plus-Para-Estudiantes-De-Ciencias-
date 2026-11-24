@@ -1,4 +1,4 @@
-# Programación Orientada A Objetos
+## Programación Orientada A Objetos
 
 Como recordarás, los antecedentes de la programación orientada a objetos se remontan a mediados de la década de 1960, con la aparición del lenguaje Simula. Sin embargo, buena parte de los términos que se utilizan actualmente en este paradigma provienen de Smalltalk, un lenguaje desarrollado a finales de los años setenta.
 
@@ -24,9 +24,9 @@ Las responsabilidades de acción corresponden a las operaciones que ejecutan una
 
 Por otra parte, un objeto también debe ofrecer mecanismos para informar sobre su estado interno. Para ello, se pueden incluir funciones que permitan consultar los valores de sus datos privados sin modificarlos. Estas operaciones pueden complementar a `escribir`, o incluso sustituirla, ya que permiten que el programa cliente decida cómo utilizar y presentar la información obtenida mediante el tipo de dato abstracto.
 
-Las funciones que devuelven información acerca de los datos internos de un objeto se denominan **responsabilidades de conocimiento**. En nuestro ejemplo, añadiremos tres funciones para consultar por separado las horas, los minutos y los segundos. También incorporaremos una función que permita solicitar estos tres valores al usuario mediante la entrada estándar.
+Las funciones que devuelven información acerca de los datos internos de un objeto se denominan **responsabilidades de conocimiento**. En el ejemplo que llevamos trabajando, añadiremos tres funciones para consultar por separado las horas, los minutos y los segundos. También incorporaremos una función que permita solicitar estos tres valores al usuario mediante la entrada estándar.
 
-Acá tenemos la especificación y la implementación de `Tiempo`: 
+Las nuevas versiones de la especificación y la implementación de `Tiempo` quedan de la siguiente forma: 
 
 ```cpp
 //***************************************************************************

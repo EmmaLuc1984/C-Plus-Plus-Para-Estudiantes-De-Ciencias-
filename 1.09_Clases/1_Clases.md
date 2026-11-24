@@ -1,6 +1,6 @@
 # Clases 
 
-En capítulos anteriores hemos tratado a los datos como entidades pasivas sobre las cuales actúan distintas funciones. Por ejemplo, se han utilizado enumeraciones para representar conjuntos de cosas y se han realizado operaciones sobre sus valores mediante funciones que los reciben como parámetros. De manera similar, al trabajar con registros, hemos mostrado el ejemplo de la información de un alumno, la cual se ha representado mediante una `struct` y también se han implementado funciones que reciben dicha estructura como argumento.
+En capítulos anteriores hemos tratado a los datos como entidades pasivas sobre las cuales actúan distintas funciones. Por ejemplo, se han utilizado enumeraciones para representar conjuntos de cosas y se han realizado operaciones sobre sus valores mediante funciones que los reciben como parámetros. De manera similar, al trabajar con registros, hemos mostrado el ejemplo de la información de un alumno, la cual hemos metido en una `struct`, con la cual hemos hasta implementado funciones que reciben dicha estructura como argumento.
 
 Sin embargo, mantener los datos separados de las operaciones que trabajan con ellos no representa del todo la idea de un tipo de dato abstracto. Esto se debe a que un TDA comprende tanto un conjunto de valores como las operaciones que pueden realizarse sobre ellos. Por ello, resulta más adecuado concebirlo como una estructura de datos activa, en la que los datos y las operaciones se integran en una misma unidad.
 
@@ -45,13 +45,15 @@ Tiempo tiempo_inicial;
 Tiempo tiempo_final;
 ```
 
-En este ejemplo, `tiempo_inicial` y `tiempo_final` son objetos de la clase `Tiempo`. Al código que declara y utiliza objetos de una clase se le conoce como **código cliente**, ya que emplea los servicios que ofrece dicha clase.
+En el ejemplo, `tiempo_inicial` y `tiempo_final` son objetos de la clase `Tiempo`. Al código que declara, crea y utiliza objetos de una clase se le conoce como *código cliente*, porque actúa como usuario de los servicios que dicha clase proporciona. En otras palabras, es el código que interactúa con los objetos para aprovechar las operaciones definidas por la clase, sin necesidad de conocer cómo están implementadas internamente.
 
-En las declaraciones de clases se utilizan las palabras reservadas `public` y `private`, seguidas de dos puntos, para establecer los niveles de acceso a sus miembros. Los miembros declarados bajo `public` forman la interfaz pública de la clase y pueden utilizarse directamente desde el código cliente, siempre que se cumplan las reglas de acceso del lenguaje. En cambio, los miembros declarados bajo `private` son privados y no pueden utilizarse directamente desde fuera de la clase. Si el código cliente intenta acceder a uno de ellos, el compilador señala un error.
+En un programa de C++, el código cliente suele encontrarse en el archivo que contiene la función `main()`, que comúnmente recibe el nombre de `main.cpp`. Esta función constituye el punto de entrada del programa y, por lo general, es donde se crean los objetos y se invocan sus funciones miembro. Sin embargo, es importante señalar que el código cliente no se limita exclusivamente a este archivo: cualquier otra función o archivo del programa que utilice objetos de una clase también puede considerarse código cliente.
 
-En la clase `Tiempo`, las funciones miembro `establecer`, `incrementar`, `escribir`, `es_igual` y `es_menor_que` pueden acceder a las variables privadas `horas`, `minutos` y `segundos`. El código cliente, en cambio, no puede acceder directamente a estas variables, sino que debe interactuar con los objetos mediante las operaciones públicas proporcionadas por la clase.
+En las declaraciones de clases se utilizan las palabras reservadas `public` y `private`, seguidas de dos puntos, para establecer los niveles de acceso a sus miembros. Los miembros declarados bajo `public` forman la *interfaz pública* de la clase y pueden utilizarse directamente desde el código cliente, siempre que se cumplan las reglas de acceso del lenguaje. En cambio, los miembros declarados bajo `private` son privados y no pueden utilizarse directamente desde fuera de la clase. Si el código cliente intenta acceder a uno de ellos, el compilador señala un error.
 
-Esta separación entre los miembros públicos y privados es una característica fundamental del diseño de los tipos de datos abstractos. Para preservar las propiedades y la consistencia de un TDA, sus objetos deben manipularse a través de las operaciones establecidas en su interfaz pública, evitando modificaciones directas que puedan producir estados inválidos. 
+En la clase `Tiempo`, las funciones miembro `establecer`, `incrementar`, `escribir`, `es_igual` y `es_menor_que` pueden acceder a las variables privadas `horas`, `minutos` y `segundos`. El código cliente, en cambio, no puede acceder directamente a estas variables; debe interactuar con los objetos mediante las operaciones públicas proporcionadas por la clase.
+
+Esta separación entre los miembros públicos y privados es la característica fundamental del diseño de los tipos de datos abstractos. Para preservar las propiedades y la consistencia de un TDA, sus objetos deben manipularse a través de las operaciones establecidas en su interfaz pública. De este modo, se evita que el código externo modifique directamente los datos internos y produzca estados inválidos. Así, la clase conserva el control sobre la manera en que se consultan y modifican sus propios datos, mientras que el código cliente únicamente necesita conocer qué operaciones puede realizar y cómo utilizarlas.
 
 
 ## Clases, Objetos De Clase Y Miembros De Clase
@@ -124,7 +126,8 @@ Por tanto, cuando una función miembro representa una operación binaria, el pri
 
 Existen otros operadores que pueden utilizarse con objetos de tipo `struct` y `class`, especialmente aquellos relacionados con las direcciones de memoria. Sin embargo, su estudio se puede dejar para más adelante. Por el momento es mejor concentrarnos en la selección de miembros mediante `.` y en la asignación mediante `=`, así como en la forma en que las funciones miembro permiten trabajar con los datos de un objeto.
 
-## Ejemplos Dentro Del Lenguaje
+## Un Ejemplo Cotidiano
+
 Aunque no lo creas, hemos trabajado con clases todo el tiempo, aunque estas siempre se han usado en un contexto mas cotidiano: la entrada y salida de información. La biblioteca estándar incluye el encabezado `<iostream>`, que proporciona las clases `istream` y `ostream` para gestionar, respectivamente, los flujos de entrada y salida.
 
 La biblioteca estándar también proporciona los objetos `cin` y `cout`, que permiten leer datos y mostrar información. Por ejemplo, la clase `istream` ofrece funciones miembro como `get` e `ignore`, que pueden utilizarse de la siguiente manera:
@@ -172,5 +175,3 @@ escribir(numero);
 El compilador de C++ puede distinguir sin dificultad a cuál de las tres funciones se refiere cada instrucción. En las dos primeras llamadas, el operador punto (`.`) indica que se debe invocar una función miembro del objeto correspondiente. Así, `tiempo_entrada.escribir()` llama a la función miembro de la clase `Tiempo`, mientras que `algun_objeto.escribir()` invoca la función miembro de `Alguna_clase`.
 
 En cambio, la última instrucción no utiliza el operador punto, por lo que hace referencia a la función global `escribir`, que recibe `numero` como argumento. De esta manera, el alcance de clase permite que diferentes clases y el ámbito global contengan funciones con el mismo nombre, sin que el compilador las confunda.
-
-
