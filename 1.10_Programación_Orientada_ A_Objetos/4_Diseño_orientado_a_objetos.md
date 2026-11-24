@@ -68,3 +68,4 @@ Es importante distinguir que el controlador no se encarga de implementar nuevame
 Esto permite apreciar una diferencia importante entre el diseño estructurado y el diseño orientado a objetos. El primero comienza desarrollando el algoritmo general del programa y posteriormente organiza sus acciones en funciones. En cambio, el diseño orientado a objetos comienza identificando los objetos y definiendo sus operaciones, para finalmente construir el controlador que coordina su funcionamiento.
 
 Como resultado, gran parte de la lógica del programa ya se encuentra distribuida entre las funciones miembro de las distintas clases, por lo que el controlador suele tener una estructura relativamente sencilla: recibe información, interpreta las acciones que deben realizarse y solicita a los objetos correspondientes que ejecuten las operaciones necesarias.
+
