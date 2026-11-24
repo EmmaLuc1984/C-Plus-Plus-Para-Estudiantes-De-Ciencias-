@@ -1,7 +1,10 @@
 # Herencia
 
 En muchos casos, es posible organizar distintos conceptos mediante una **jerarquía de herencia**, en la que cada concepto adquiere las propiedades del concepto que se encuentra inmediatamente por encima de él. Un ejemplo consiste en clasificar distintos tipos de vehículos de acuerdo con una jerarquía de este tipo: 
+
+
 ![Diagrama](https://github.com/EmmaLuc1984/C-plus-plus-para-principiantes-parte-2/blob/main/f5e9d2f6-9ca6-43c8-8099-063e54c2ca42.webp)
+
 
 A medida que se desciende en la jerarquía, cada tipo de vehículo se vuelve más específico que su concepto padre y que los demás conceptos de los que desciende. Al mismo tiempo, es más general que sus propios conceptos hijos y que todos los que se encuentran por debajo de ellos.
 
