@@ -1,5 +1,6 @@
 # C++ Para Estudiantes De Ciencias
 Este es un repositorio con material de C++ para el Taller de Herramientas Computacionales impartido en la Facultad de Ciencias de la UNAM
+<img src="./banner.svg" alt="Material de C++" width="100%" />
 
 ## Visual Studio Code
 

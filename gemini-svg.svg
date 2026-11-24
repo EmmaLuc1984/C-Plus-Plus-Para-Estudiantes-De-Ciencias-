@@ -1,0 +1,90 @@
+<svg width="900" height="260" viewBox="0 0 900 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Fondo y gradientes */
+    .bg { fill: #0d1117; }
+    .border { stroke: #30363d; stroke-width: 2; }
+    
+    /* Animación de flotación para el escudo y el logo C++ */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .floating-delay { animation: float 4s ease-in-out 1.5s infinite; }
+
+    /* Animación de pulso para circuitos y brillo */
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.9; }
+    }
+    .circuit { stroke: #58a6ff; stroke-width: 1.5; animation: pulse 3s infinite; }
+    .circuit-gold { stroke: #d29922; stroke-width: 1.5; animation: pulse 3s 1.5s infinite; }
+
+    /* Efecto de escritura en terminal */
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    .cursor { animation: blink 1s step-end infinite; fill: #58a6ff; }
+
+    /* Tipografías */
+    .title { font: bold 24px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #ffffff; letter-spacing: 0.5px; }
+    .subtitle { font: 600 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #d29922; letter-spacing: 1px; }
+    .code { font: 14px "Fira Code", "Courier New", monospace; fill: #8b949e; }
+    .code-highlight { font: bold 15px "Fira Code", "Courier New", monospace; fill: #79c0ff; }
+    .badge-text { font: bold 14px "Fira Code", "Courier New", monospace; fill: #0d1117; }
+  </style>
+
+  
+  <rect x="1" y="1" width="898" height="258" rx="12" class="bg border" />
+
+  
+  <path d="M 0 30 L 180 30 L 200 50 L 320 50" class="circuit" fill="none" />
+  <circle cx="320" cy="50" r="3" fill="#58a6ff" />
+  
+  <path d="M 900 220 L 720 220 L 700 200 L 550 200" class="circuit-gold" fill="none" />
+  <circle cx="550" cy="200" r="3" fill="#d29922" />
+
+  
+  <text x="640" y="45" class="code" opacity="0.4">#include &lt;iostream&gt;</text>
+  <text x="640" y="65" class="code" opacity="0.4">using namespace std;</text>
+  <text x="640" y="85" class="code" opacity="0.4">int main() { return 0; }</text>
+
+  
+  <g class="floating" transform="translate(45, 45)">
+    <rect x="0" y="0" width="150" height="170" rx="10" fill="#161b22" stroke="#d29922" stroke-width="1.5" />
+    
+    
+  </g>
+
+  
+  <g class="floating-delay" transform="translate(225, 85)">
+    <polygon points="45,0 90,25 90,75 45,100 0,75 0,25" fill="#00599c" stroke="#659ad2" stroke-width="2" />
+    <polygon points="45,0 90,25 90,75 45,100" fill="#004482" opacity="0.6" />
+    <text x="45" y="62" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="38" fill="#ffffff">C++</text>
+  </g>
+
+  
+  <g transform="translate(345, 65)">
+    
+    <text x="0" y="0" class="subtitle">FACULTAD DE CIENCIAS • UNAM</text>
+    
+    
+    <text x="0" y="38" class="title">Taller de Herramientas</text>
+    <text x="0" y="68" class="title">Computacionales</text>
+
+    
+    <g transform="translate(0, 92)">
+      <rect x="0" y="0" width="215" height="32" rx="6" fill="#58a6ff" />
+      <text x="15" y="21" class="badge-text">&gt;_ MATERIAL DE C++</text>
+      <rect x="190" y="9" width="8" height="15" class="cursor" style="fill: #0d1117;" />
+    </g>
+
+    
+    <text x="0" y="152" class="code-highlight">$ g++ -std=c++20 main.cpp -o practica</text>
+    <rect x="335" y="139" width="8" height="15" class="cursor" />
+  </g>
+</svg>
