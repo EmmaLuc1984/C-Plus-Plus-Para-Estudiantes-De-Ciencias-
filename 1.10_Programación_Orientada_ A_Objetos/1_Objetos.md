@@ -16,7 +16,7 @@ La terminología de la programación orientada a objetos está muy influida por 
 
 ## Responsabilidades De Los Objetos
 
-En el diseño orientado a objetos, los métodos que ofrece una clase también pueden interpretarse como sus **responsabilidades**. La versión inicial de `Tiempo` contaba con siete métodos: cinco funciones miembro (`establecer`, `incrementar`, `escribir`, `igual` y `menor_que`) y dos constructores. Uno de los constructores recibía las horas, los minutos y los segundos como argumentos; el otro inicializaba el tiempo en cero.
+En el diseño orientado a objetos, los métodos que ofrece una clase también pueden interpretarse como sus **responsabilidades**. La versión inicial de `Tiempo` contaba con siete métodos: cinco funciones miembro (`establecer`, `incrementar`, `escribir`, `es_igual` y `es_menor_que`) y dos constructores. Uno de los constructores recibía las horas, los minutos y los segundos como argumentos; el otro inicializaba el tiempo en cero.
 
 Las responsabilidades de un objeto pueden clasificarse en dos categorías: **responsabilidades de acción** y **responsabilidades de conocimiento**.
 
