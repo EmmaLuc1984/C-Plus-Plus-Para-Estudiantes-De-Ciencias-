@@ -1,4 +1,4 @@
-# Paradigmas En Los Lenguajes De Programación
+
 
 En el primer capitulo de este curso definimos de manera escueta un **objeto** en C++ como *un fragmento de memoria que se puede usar para almacenar valores*, un ejemplo de ello es una variable. 
 
@@ -17,7 +17,7 @@ Ahora, observa a tu alrededor: por todas partes hay objetos: libros, edificios, 
 
 En programación, las propiedades se representan mediante objetos y los comportamientos mediante funciones. Por lo tanto, la programación procedimental representa la realidad de forma bastante deficiente, ya que separa las propiedades (objetos) de los comportamientos (funciones).
 
-# ¿Que Es La Programación Orientada A Objetos? 
+## ¿Que Es La Programación Orientada A Objetos? 
 
 En la programación orientada a objetos (a menudo abreviada como POO), el enfoque se centra en la creación de tipos de datos definidos por el usuario que contienen tanto propiedades como un conjunto de comportamientos bien definidos. El término **objeto** en POO hace referencia a las entidades que podemos crear a partir de estos tipos.
 
