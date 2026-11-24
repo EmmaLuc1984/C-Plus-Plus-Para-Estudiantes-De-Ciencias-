@@ -1,4 +1,4 @@
-<img src="./banner.svg" alt="Material de C++" width="100%" />
+<img src="gemini-svg.svg" alt="Material de C++" width="100%" />
 
 
 
