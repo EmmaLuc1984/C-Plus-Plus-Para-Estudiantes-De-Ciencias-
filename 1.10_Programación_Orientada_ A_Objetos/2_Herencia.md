@@ -385,7 +385,7 @@ Tiempo_extendido::Tiempo_extendido(
 
 Después de la lista de parámetros del constructor y antes de su cuerpo, se escribe una *lista de inicialización*, que comienza con dos puntos (`:`), seguida del nombre de la clase base y los argumentos que recibirá su constructor.
 
-Ahora supongamos que creamos un objeto mediante la siguiente declaración:
+Ahora supongamos que creamos un objeto mediante la siguiente declaracin:
 
 ```cpp
 Tiempo_extendido tiempo1(8, 35, 0, pst);
